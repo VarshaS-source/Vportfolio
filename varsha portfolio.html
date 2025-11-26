@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Varsha | Software Intern Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; transition: 0.3s;} 
+    body {background: linear-gradient(135deg, #a5b4fc, #fde047); padding: 20px;}
+
+    body.dark {background: linear-gradient(135deg, #0f172a, #1e293b);} 
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      animation: fadeIn 0.8s ease;
+    }
+    body.dark .container {background: #1e293b; color: #f1f5f9;}
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Header */
+    .header {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 2px solid #e2e8f0;}
+    body.dark .header {border-color: #334155;}
+
+    #typewriter {font-size: 36px; font-weight: 700; color: #1e293b;} 
+    body.dark #typewriter {color: #fefefe;}
+
+    .sub {color: #475569; margin-top: 6px; line-height: 1.5;} 
+    body.dark .sub {color: #cbd5e1;}
+
+    /* Photo */
+    .photo {width: 130px; height: 130px; border-radius: 50%; overflow: hidden; border: 4px solid #6366f1; box-shadow: 0 4px 12px rgba(0,0,0,0.3);} 
+    .photo img {width: 100%; height: 100%; object-fit: cover;}
+
+    /* Section */
+    .section {margin-top: 40px;}
+    .section h2 {font-size: 26px; margin-bottom: 12px; position: relative; color: #1e293b;} 
+    body.dark .section h2 {color: #f1f5f9;}
+
+    .section h2::after {content: ""; width: 60px; height: 4px; background: #6366f1; position: absolute; left: 0; bottom: -6px; border-radius: 4px;}
+
+    /* Skills */
+    .skills ul {display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; list-style: none;}
+    .skills li {background: #f1f5ff; border: 1px solid #dbeafe; padding: 12px; border-radius: 10px; text-align: center; font-weight: 500;}
+    .skills li:hover {transform: scale(1.08); background: #6366f1; color: white;}
+    body.dark .skills li {background: #334155; border-color: #475569; color: #e2e8f0;}
+
+    /* Projects */
+    .project {background: #fafafa; border: 1px solid #e0e7ff; padding: 20px; border-radius: 14px; margin-bottom: 20px;}
+    .project:hover {transform: translateY(-5px); box-shadow: 0 8px 20px rgba(99,102,241,0.25);} 
+    body.dark .project {background: #273449; border-color: #3f4d63;}
+
+    .tags span {border: 1px solid #94a3b8; padding: 5px 8px; border-radius: 6px; font-size: 12px; margin-right: 5px;} 
+    body.dark .tags span {border-color: #64748b; color: #f8fafc;}
+
+    .btn {display: inline-block; margin-top: 12px; padding: 8px 15px; background: #6366f1; color: white; border-radius: 8px; text-decoration: none;}
+    .btn:hover {background: #4f46e5;}
+
+    /* Contact */
+    .contact a {color: #4f46e5; font-weight: 600; text-decoration: none;} 
+    body.dark .contact a {color: #818cf8;}
+
+    footer {text-align:center; margin-top:35px; color:#64748b; font-size:14px; padding-top: 10px; border-top: 1px solid #e2e8f0;} 
+    body.dark footer {color: #cbd5e1; border-color: #334155;}
+
+    /* Toggle Button */
+    #toggleDark {position: fixed; top: 20px; right: 20px; padding: 10px 18px; background: #6366f1; border: none; border-radius: 8px; color: white; cursor:pointer; font-size: 14px;}
+  </style>
+</head>
+<body>
+
+  <button id="toggleDark">🌙 Dark Mode</button>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="info">
+        <h1 id="typewriter"></h1>
+        <p class="sub">Software Engineering Internship - Penang</p>
+        <p class="sub" style="margin-top:10px; max-width:500px;">Motivated computer science student eager to develop real-world skills in software, troubleshooting, and problem solving. Passionate about building simple, useful tools.</p>
+      </div>
+
+      <div class="photo"><img src="photo.jpg" /></div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git / GitHub</li>
+        <li>Problem Solving</li>
+        <li>IT Support Basics</li>
+      </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Penang Tourist Website</h3>
+        <p>A modern tourist guide website built with API integration.</p>
+        <div class="tags"><span>HTML</span><span>JS</span><span>API</span></div>
+        <a href="https://penangv.netlify.app/" class="btn">View Project</a>
+      </div>
+
+      <div class="project">
+        <h3>Frosty Delights</h3>
+        <p>A responsive online ordering website for ice creams & drinks.</p>
+        <div class="tags"><span>HTML</span><span>JS</span><span>UI</span></div>
+        <a href="https://varshas-source.github.io/FrostyDelights/" class="btn">View Project</a>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <h2>Experience & Education</h2>
+
+      <div class="project">
+        <h3>Bachelor of Computer Science (Software Engineering)</h3>
+        <p class="sub">Universiti Sains Malaysia • 2023–2027</p>
+        <p>Relevant coursework: IT fundamentals, algorithms, networking, web technologies.</p>
+      </div>
+
+      <div class="project">
+        <h3>Foundation in Physical Science</h3>
+        <p class="sub">Kolej Matrikulasi Johor • 2022–2023</p>
+        <p>Subjects: CS basics, physics, math, chemistry.</p>
+      </div>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:varshasures8@gmail.com">varshasures8@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/varsha-sures-b21874290">linkedin.com/in/varsha-sures</a></p>
+      <p>GitHub: <a href="https://github.com/VarshaS-source">github.com/VarshaS-source</a></p>
+    </div>
+
+    <footer>Built with ♥ for internship applications</footer>
+
+  </div>
+
+  <script>
+    /* Dark Mode */
+    const btn = document.getElementById("toggleDark");
+    btn.onclick = () => {
+      document.body.classList.toggle("dark");
+      btn.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    };
+
+    /* Typing Animation */
+    const text = "Varsha A/P Sures";
+    let index = 0;
+    function type() {
+      document.getElementById("typewriter").innerText = text.slice(0, index++);
+      if (index <= text.length) setTimeout(type, 120);
+    }
+    type();
+  </script>
+
+</body>
+</html>
